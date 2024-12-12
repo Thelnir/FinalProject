@@ -1,0 +1,470 @@
+/*
+Student Name: Joshua Whitmore
+Today's Date: 12/9/2024
+File Name: styles.css
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h3, ul, aside, figure, figcaption, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rules for body and images */
+body {
+    background-color: #f6eee4;
+}
+
+img, video {
+    max-width: 100%;
+    display: block;
+}
+
+/*Style rules for skip navigation link*/
+.skip
+{
+    position: absolute;
+    left: -999px;
+}
+
+.skip:focus
+{
+    color: #fff;
+    background-color: #0047AB;
+    text-decoration: none;
+    padding: 0.5%;
+    top: auto;
+    left: auto;
+    right: 1px;
+    z-index: 1;
+}
+
+/* Style rules for mobile viewport */
+
+/* Style rule show mobile class and hide tab-desk class */
+.mobile {
+    display: block;
+}
+
+.tab-desk, .desktop {
+    display: none;
+}
+
+#nav-links
+{
+    display: none;
+}
+
+/* Style rules for header area */
+.mobile h1, .mobile h3 {
+    padding: 2%;
+    text-align: center;
+}
+
+.mobile h1 {
+    font-family: 'Emblema One', cursive;
+    margin: 2% 0 0 3%;
+}
+
+.mobile h3 {
+    font-family: 'Lora', serif;
+}
+
+/* Style rules for navigation area */
+nav {
+    background-color: #0047AB;
+}
+/*
+nav li {
+    display: block;
+    font-size: 1.5em;
+    border-top: 0.5px solid #f6eee4;
+}
+
+nav li a {
+    display: block;
+    color: #f6eee4;
+    padding: 0.5em 2em;
+    text-decoration: none;
+}
+*/
+
+.mobile-nav a
+{
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+    text-decoration: none;
+    padding: 3%;
+    display: block;
+}
+.mobile-nav a.nav-icon
+{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #f6eee4;
+    padding: 2%;
+}
+.nav-icon div
+{
+    height: 40px;
+    width: 40px;
+    color: #0047AB;
+}
+
+/* Style rules for main content */
+main {
+    padding: 2%;
+    font-family: 'Lora', serif;
+}
+
+main p {
+    font-size: 1.25em;
+}
+
+main h3 {
+    padding-top: 2%;
+}
+
+main ul {
+    list-style-type: square;
+}
+
+.link {
+    color: #4d3319;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.action {
+    font-size: 1.75em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.round {
+    border-radius: 6px;
+}
+
+aside {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 4px 4px 10px #c5a687;
+}
+
+figure {
+    border: 4px solid #0047AB;
+    box-shadow: 6px 6px 10px #c5a687;
+    max-width: 400px;
+    margin: 2% auto;
+}
+
+figcaption {
+    padding: 2%;
+    border-top: 4px solid #0047AB;
+}
+
+#info ul {
+    margin-left: 10%;
+}
+
+#contact {
+    text-align: center;
+}
+#form h2
+{
+    text-align: center;
+}
+
+.tel-link {
+    background-color: #0047AB;
+    padding: 2%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tel-link a {
+    color: #f6eee4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#questions
+{
+    cursor: pointer;
+}
+#answer
+{
+    text-align: center;
+    font-weight: bold;
+    width: 80%;
+    margin: 0 auto;
+}
+#answer h2
+{
+    display: none;
+}
+
+/*Style rules for form elements*/
+fieldset
+{
+    margin-bottom: 2%;
+
+}
+input
+{
+    margin-bottom: 2%;
+
+}
+textarea
+{
+    margin-bottom: 2%;
+
+}
+fieldset legend
+{
+    font-weight: bold;
+    font-size: 1.25em;
+}
+label
+{
+    display: block;
+    padding-top: 2%;
+}
+form #submit
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 2%;
+    background-color: #78593a;
+    color: #f6eee4;
+    font-size: 1.25em;
+    border-radius: 10px;
+}
+
+
+/* Style rules for footer content */
+footer {
+    text-align: center;
+    font-size: 0.85em;
+    background-color: #0047AB;
+    color: #f6eee4;
+    padding: 1% 0;
+}
+
+footer a {
+    color: #f6eee4;
+    text-decoration: none;
+}
+
+.social img
+{
+    display: inline-block;
+    padding: 4%;
+}
+
+/*Linear questions baseline state*/
+.linear
+{
+    display: none;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 620px), print {
+ 
+    /* Tablet Viewport: Show tab-desk class, hide mobile class */
+    .tab-desk {
+        display: block;
+    }
+
+    .mobile, .mobile-nav {
+        display: none;
+    }
+    
+    /* Tablet Viewport: Style rules for nav area */
+    nav ul {
+        list-style-type: none;
+        text-align: center;
+    }
+    
+    nav li {
+        border-top: none;
+        display: inline-block;
+        font-size: 1.25em;
+        font-family: Geneva, Arial, sans-serif;
+        font-weight: bold;    
+    }
+    
+    nav li a {
+        padding: 0.5em;
+        display: block;
+        color: #f6eee4;
+        text-decoration: none;    
+    }
+    
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+    }
+    
+    aside {
+        grid-column: 1 / span 2;
+    }
+     /*Tablet Viewport: Style rules for form elements*/
+     form
+     {
+        width: auto;
+    
+     }
+
+     /*Tablet viewport: Style rules for footer area*/
+     footer
+     {
+        overflow: auto;
+     }
+     .copyright
+     {
+        float: left;
+        width: 65%;
+     }
+     .social
+     {
+        float: right;
+        width: 25%;
+     }
+
+     .form-grid
+     {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+     }
+     .btn
+     {
+        grid-column: 1 / span 2;
+     }
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1000px), print {
+    
+    /* Desktop Viewport: Show desktop class, hide mobile-tablet class */
+    .desktop
+    {
+        display: block;
+    }
+    .mobile-tablet
+    {
+        display: none;
+    }
+
+    /* Desktop Viewport: Style rules for nav area */
+    nav li {
+        font-size: 1.5em;
+    }
+    
+    nav li a {
+        padding: 0.5em 1.5em;
+    }
+    
+    nav li a:hover {
+        color: #0047AB;
+        background-color: #f6eee4;
+        opacity: 0.5;
+    }
+    
+    /* Desktop Viewport: Style rules for main content */
+    #info ul {
+        margin-left: 5%;
+    }
+    
+    .grid {
+        grid-template-columns: auto auto auto;
+        grid-gap: 30px;
+    }
+    
+    aside {
+        grid-column: 1 / span 3;
+        font-size: 2em;
+    }
+    
+    /*Style rules for table*/
+    table
+    {
+        border: 1px solid #0047AB;
+        border-collapse: collapse;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    caption
+    {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 1%;
+    }
+    tr:nth-of-type(odd)
+    {
+        background-color: #deccba;
+    }
+    th
+    {
+        border: 1px solid #0047AB;
+        padding: 1%;
+        background-color: #0047AB;
+        color: white;
+        font-size: 1.15em;
+    }
+    td
+    {
+        border: 1px solid #0047AB;
+        padding: 1%;
+    }
+}
+
+/* Media Query for Large Desktop Viewports */
+@media screen and (min-width: 1921px), print {
+    
+    body {
+        background: linear-gradient(#f6eee4, #78593a);
+    }
+    
+    #wrapper {
+        width: 1920px;
+        margin: 0 auto;
+    }
+        
+    main {
+        background-color: #f6eee4;
+    }
+    
+    .grid {
+        grid-template-columns: auto auto auto auto;
+    }
+    
+    aside {
+        grid-column: 1 / span 4;
+        font-size: 3em;
+    }
+    
+}
+
+/* Media Query for Print */
+@media print {
+    
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+    
+}
